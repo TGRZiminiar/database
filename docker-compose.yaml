@@ -1,0 +1,38 @@
+version: '3'
+ 
+services:
+  mysql:
+    image: mysql:latest
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: dream_home
+      MYSQL_USER: mix
+      MYSQL_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
+
+
+# version: '3'
+ 
+# services:
+#   mariadb:
+#     image: mariadb:11.1.4
+#     container_name: mdb
+#     environment:
+#       MARIADB_ROOT_PASSWORD: 123
+#       MARIADB_DATABASE: dream_home
+#       MARIADB_USER: mix
+#       MARIADB_PASSWORD: 123
+#     ports:
+#       - "8080:8080"
+#     volumes:
+#       - dbdata:/var/lib/mariadb
+
+# volumes:
+#   dbdata:
